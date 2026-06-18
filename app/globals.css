@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0b0b0b;
+  --fg: #e0dbd2;
+  --fg-muted: #6a6560;
+  --fg-subtle: #2a2825;
+  --accent: #c2b298;
+  --divider: #1c1a18;
+  --cursor-x: -500px;
+  --cursor-y: -500px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --font-display: var(--font-martian);
+  --font-mono: var(--font-ibm-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  cursor: none !important;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-martian), monospace;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(194, 178, 152, 0.18);
+}
+
+/* ── Cursor & Spotlight ─────────────────────────── */
+
+.spotlight {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  background: radial-gradient(
+    680px circle at var(--cursor-x) var(--cursor-y),
+    rgba(210, 190, 155, 0.07),
+    transparent 80%
+  );
+}
+
+.cursor-dot {
+  position: fixed;
+  top: calc(var(--cursor-y) - 3px);
+  left: calc(var(--cursor-x) - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.85;
+}
+
+/* ── Animations ─────────────────────────────────── */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.delay-1 { animation-delay: 80ms; }
+.delay-2 { animation-delay: 160ms; }
+.delay-3 { animation-delay: 240ms; }
+.delay-4 { animation-delay: 340ms; }
+.delay-5 { animation-delay: 440ms; }
+.delay-6 { animation-delay: 540ms; }
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 560px) {
+  .cv-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .cv-grid-label {
+    padding-bottom: 6px;
+  }
+}
+
+/* ── Link hover ─────────────────────────────────── */
+
+.hover-accent {
+  transition: color 0.2s ease;
+}
+.hover-accent:hover {
+  color: var(--accent);
 }

@@ -1,0 +1,62 @@
+{
+  "header": {
+    "name": "lennart schaeffer",
+    "title": "software engineer",
+    "tagline": "third year computer science student at Dalhousie University. interested in all things software engineering, data engineering, and ai/ml.",
+    "email": "lennartschaeffer@hotmail.com",
+    "github": "https://github.com/lennartschaeffer",
+    "linkedin": "https://www.linkedin.com/in/lennart-schaeffer-929b12247/"
+  },
+  "about": {
+    "bio": "i'm a dutch/canadian student, spending most of my life living on the caribbean island curacao. nowadays you can find me in the gym, working on my personal projects, or on the pickleball court."
+  },
+  "work-experience": [
+    {
+      "company": "Royal Bank of Canada, Amplify",
+      "role": "software engineer intern",
+      "start": "may 2026",
+      "end": "present",
+      "location": "toronto, on",
+      "description": "building a production-grade AI product within Amplify, RBC's highly competitive summer innovation program. (1/68 out of 15K+ applicants)",
+      "technologies": ["react", "typescript", "python", "docker", "kubernetes"],
+      "logo": "https://www.rbc.com/dvl/v1.0/assets/images/logos/rbc-logo-shield.svg"
+    },
+    {
+      "company": "BDO Canada",
+      "role": "data engineer intern",
+      "start": "jan 2026",
+      "end": "apr 2026",
+      "location": "halifax, ns",
+      "description": "built an end-to-end RAG pipeline + custom MCP servers for a $7B real estate investment firm.",
+      "technologies": ["python", "sql", "azure"],
+      "logo": "/bdo.jpeg"
+    },
+    {
+      "company": "Jazz Aviation",
+      "role": "software engineer intern",
+      "start": "may 2025",
+      "end": "sep 2025",
+      "location": "halifax, ns",
+      "description": "led development of an ai staff scheduling tool, shipped production features for an employee shift bidding platform.",
+      "technologies": ["react", "typescript", "c#", ".net"],
+      "logo": "/jazz.jpeg"
+    }
+  ],
+  "projects": [
+    {
+      "name": "resuralph",
+      "description": "built a resume reviewing platform for 2,000+ students.",
+      "url": "https://resuralph.vercel.app",
+      "github": "https://github.com/lennartschaeffer/resuralph-platform",
+      "image": "/projects/project.png",
+      "technologies": ["next.js", "python", "aws"]
+    },
+    {
+      "name": "picklemix",
+      "description": "a mobile app to optimize pickleball team mixing. 1,400+ downloads across app store and play store.",
+      "url": "https://apps.apple.com/ca/app/picklemix-court-organizer/id6759943072",
+      "image": "/projects/another.png",
+      "technologies": ["react native", "typescript"]
+    }
+  ]
+}
