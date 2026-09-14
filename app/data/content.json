@@ -15,9 +15,9 @@
       "company": "Royal Bank of Canada, Amplify",
       "role": "software engineer intern",
       "start": "may 2026",
-      "end": "present",
+      "end": "aug 2026",
       "location": "toronto, on",
-      "description": "building a production-grade AI product within Amplify, RBC's highly competitive summer innovation program. (1/68 out of 15K+ applicants)",
+      "description": "built a patent-pending investment simulation MVP for RBC Mobile, pitched to C-suite execs and won the $20,000 'Best Business Value' award.",
       "technologies": ["react", "typescript", "python", "docker", "kubernetes"],
       "logo": "https://www.rbc.com/dvl/v1.0/assets/images/logos/rbc-logo-shield.svg"
     },
@@ -53,8 +53,10 @@
     },
     {
       "name": "picklemix",
-      "description": "a mobile app to optimize pickleball team mixing. 1,400+ downloads across app store and play store.",
+      "description": "a mobile app to optimize pickleball team mixing. 4,000+ downloads across app store and play store.",
       "url": "https://apps.apple.com/ca/app/picklemix-court-organizer/id6759943072",
+      "appStore": "https://apps.apple.com/ca/app/picklemix-court-organizer/id6759943072",
+      "playStore": "https://play.google.com/store/apps/details?id=com.lennartschaeffer.picklemix",
       "image": "/projects/another.png",
       "technologies": ["react native", "typescript"]
     }
